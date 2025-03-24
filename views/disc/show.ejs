@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= disc.name %></title>
+</head>
+<body>
+    <h1><%= disc.name %></h1>
+    <h3>Speed: <%= disc.speed %></h3>
+    <h3>Glide: <%= disc.glide %></h3>
+    <h3>Turn: <%= disc.turn %></h3>
+    <h3>Fade: <%= disc.fade %></h3>
+    <% if (disc.inTheBag) { %>
+        <h4>This Disc is in your bag!</h4>
+    <% } else { %>
+        <h4>This Disc isnt in your bag</h4>
+    <% } %>
+    <form action="/disc/<%=disc._id%>?_method=DELETE" method="POST">
+        <button type="submit">Delete</button>
+    </form>
+    <a href="/disc/<%= disc._id %>/edit">Edit</a>
+    <a href="/disc/">Back to Discs</a>
+</body>
+</html>

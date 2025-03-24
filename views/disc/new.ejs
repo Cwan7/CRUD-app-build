@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Disc</title>
+</head>
+<body>
+    <h1>Add a New Disc</h1>
+    <form action="/disc" method="POST">
+        <lable type="name">Name</lable>
+        <input type="text" name="name" id="name" />
+
+        <lable type="speed">Speed</lable>
+        <input type="text" name="speed" id="speed" />
+
+        <lable type="glide">Glide</lable>
+        <input type="text" name="glide" id="glide" />
+
+        <lable type="turn">Turn</lable>
+        <input type="text" name="turn" id="turn" />
+        
+        <lable type="fade">Fade</lable>
+        <input type="text" name="fade" id="fade" />
+
+        <lable type="glide">Put In the Bag</lable>
+        <input type="checkbox" name="inTheBag" id="inTheBag" />
+
+        <button type="submit">Add Disc</button>
+    </form>
+    <a href="/disc/">Back to Discs</a>
+    
+</body>
+</html>

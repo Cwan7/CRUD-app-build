@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>All Discs</h1>
+    <ul>
+        <% disc.forEach(disc => { %>
+            <li><a href="/disc/<%= disc._id %>"><%= disc.name%></a></li>
+        <% }) %>
+    </ul>
+    <a href="/disc/new">Add Disc</a>
+    <a href="/disc/bag">Check Bag</a>
+</body>
+</html>

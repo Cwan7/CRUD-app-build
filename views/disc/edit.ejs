@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/disc/<%= disc._id%>?_method=PUT" method="POST">
+        <lable type="name">Name</lable>
+        <input type="text" name="name" value="<%= disc.name %>" />
+
+        <lable type="speed">Speed</lable>
+        <input type="text" name="speed" value="<%= disc.speed %>" />
+
+        <lable type="glide">Glide</lable>
+        <input type="text" name="glide" value="<%= disc.glide %>" />
+
+        <lable type="turn">Turn</lable>
+        <input type="text" name="turn" value="<%= disc.turn %>" />
+        
+        <lable type="fade">Fade</lable>
+        <input type="text" name="fade" value="<%= disc.fade%>" />
+
+        <lable type="glide">Put In the Bag</lable>
+        <input type="checkbox" name="inTheBag" <% if (disc.inTheBag) {%>checked<%} %>>
+
+        <button type="submit">Update</button>
+    </form>
+    <a href="/disc/">Back to Discs</a>
+</body>
+</html>
