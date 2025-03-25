@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css" />
     <title>Add Disc</title>
 </head>
 <body>
@@ -23,12 +24,16 @@
         <lable type="fade">Fade</lable>
         <input type="text" name="fade" id="fade" />
 
-        <lable type="glide">Put In the Bag</lable>
-        <input type="checkbox" name="inTheBag" id="inTheBag" />
+        <div class="checkbox-div">
+            <lable for="in-the-bag">Put In the Bag</lable>
+            <input type="checkbox" name="inTheBag" id="in-the-bag" />
+        </div>
 
         <button type="submit">Add Disc</button>
     </form>
-    <a href="/disc/">Back to Discs</a>
+    <a class="disc-index-link"href="/disc/">
+        <div class="index-link-text">Back to Discs</div>
+    </a>
     
 </body>
 </html>

@@ -3,17 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css" />
     <title>Bag</title>
 </head>
 <body>
-    <h1>Your Bag</h1>
+    <div class="index-header-div">
+        <h1>Your Bag</h1>
+    </div>
     <ul>
         <% disc.forEach(disc => { %>
             <% if (disc.inTheBag) {%>
-            <p><%= disc.name%></p>
+            <p class="disc-cards"><%= disc.name%></p>
             <% } %>
         <% }) %>
     </ul> 
-    <a href="/disc/">Back to Discs</a>
+    <a class="index-links" href="/disc/">Back to Discs</a>
 </body>
 </html>

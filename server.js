@@ -6,6 +6,7 @@ const app = express();
 const mongoose = require("mongoose"); 
 const methodOverride = require("method-override"); 
 const morgan = require("morgan"); 
+const path = require("path");
 
 mongoose.connect(process.env.MONGODB_URI);
 mongoose.connection.on("connected", () => {
@@ -14,9 +15,9 @@ mongoose.connection.on("connected", () => {
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride("_method")); // new
 app.use(morgan("dev")); //new
+app.use(express.static(path.join(__dirname, "public")));
 
 const Disc = require("./models/disc.js");
-app.use(express.urlencoded({ extended: false }));
 
 app.get('/', async (req,res) => {
     res.render('index.ejs')
@@ -66,6 +67,6 @@ app.delete('/disc/:discId', async (req,res) => {
 
 
 
-app.listen(3000, () => {
+app.listen(3001, () => {
     console.log('Listening on port 3000');
   });

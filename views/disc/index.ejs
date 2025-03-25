@@ -3,16 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css" />
     <title>Document</title>
 </head>
 <body>
-    <h1>All Discs</h1>
+    <div class="index-header-div">
+        <h1>All Discs</h1>
+    </div>
     <ul>
         <% disc.forEach(disc => { %>
-            <li><a href="/disc/<%= disc._id %>"><%= disc.name%></a></li>
+            <li><a class="disc-cards" href="/disc/<%= disc._id %>"><%= disc.name%></a></li>
         <% }) %>
     </ul>
-    <a href="/disc/new">Add Disc</a>
-    <a href="/disc/bag">Check Bag</a>
+    <div class="index-links-container">
+        <a class="index-links" href="/disc/new">Add Disc</a>
+        <a class="index-links" href="/disc/bag">Check Bag</a>
+    </div>
 </body>
 </html>
